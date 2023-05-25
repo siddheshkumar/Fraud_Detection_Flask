@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection</title>
+    <style>
+        body {
+            background-image: url("IMG.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fraud Detection</h1>
+    <form action="/detect_fraud" method="post">
+        <label for="amount">Transaction Amount:</label>
+        <input type="text" name="amount" id="amount">
+        <br>
+        <label for="oldbalanceOrg">Old Balance (Origin Account):</label>
+        <input type="text" name="oldbalanceOrg" id="oldbalanceOrg">
+        <br>
+        <label for="newbalanceOrig">New Balance (Origin Account):</label>
+        <input type="text" name="newbalanceOrig" id="newbalanceOrig">
+        <br>
+        <label for="newbalanceDest">New Balance (Destination Account):</label>
+        <input type="text" name="newbalanceDest" id="newbalanceDest">
+        <br>
+        <label for="oldbalanceDest">Old Balance (Destination Account):</label>
+        <input type="text" name="oldbalanceDest" id="oldbalanceDest">
+        <br>
+        <br>
+        <input type="submit" value="Detect Fraud">
+    
+
+    <script>
+        // Select the form element
+        const form = document.getElementById('myForm');
+      
+        // Add a submit event listener to the form
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission behavior
+      
+          // Perform any necessary form validation or processing here
+      
+          // Display an alert message
+          alert('Form submitted successfully!'); // You can customize this message as needed
+      
+          // Reset the form if desired
+          form.reset();
+        });
+      </script>
+    </form>
+      
+</body>
+</html>
+
+
